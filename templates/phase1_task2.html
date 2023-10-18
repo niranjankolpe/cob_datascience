@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Phase 1 - Task 2{% endblock title %}
+
+{% block style %}
+    iframe{
+        width: 100%;
+        height: 500px;
+        border: 1px solid black;
+    }
+{% endblock style %}
+
+{% block script %}{% endblock script %}
+
+{% block body %}
+    <h2>Phase 1 - Task 2</h2><br>
+
+    <big>
+        <b>Task 2:</b> Clean the dataset replace missing values, remove outliers etc <br>
+        Dataset: https://docs.google.com/spreadsheets/d/e/2PACX-1vTSSTcErkXNk8KB0AlijhitwetxeHD2M3R0HJl2QPMAyFq0fxFX4PFKnzA
+WLDnratIz67DNL6GsZnV/pub?output=csv <br><br>
+        Original Dataset: <br>
+    </big>
+    <iframe src="original_netflix_dataset"></iframe><br><br>
+
+    <big>Outlier Analysis for column "release_year":</big>
+    <img src="static/release_year.png" alt="Image cannot be displayed!"><br>
+
+    <big>Cleaned Dataset:</big><br>
+    <iframe src="cleaned_netflix_dataset"></iframe><br><br>
+
+    <div class="container container-buttons" style="text-align: center;">
+        <a href="phase1_task2_refresh" class="btn btn-secondary">Refresh Dataset</a>
+        <a href="home" class="btn btn-primary">Return Home</a>
+    </div><br><br>
+{% endblock body %}
