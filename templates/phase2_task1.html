@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Phase 2 - Task 1{% endblock title %}
+
+{% block style %}
+iframe{
+    width: 100%;
+    height: 300px;
+    border: 1px solid black;
+}
+img{
+    width: 80%;
+    height: 500px;
+}
+{% endblock style %}
+
+{% block script %}{% endblock script %}
+
+{% block body %}
+    <h2>Phase 2 - Task 1</h2><br>
+
+    <big>
+        <b>Task 1:</b> Analyze the dataset and create graphs using seaborn and matplotlib. <br>
+        Dataset: https://docs.google.com/spreadsheets/d/e/2PACX-1vTSS-TcErkXNk8KB0AlijhitwetxeHD2M3R0HJl2QPMAyFq0fxFX4PFKnzAWLDnratIz67DNL6GsZnV/pub?output=csv <br><br>
+        Original Dataset: <br>
+    </big>
+    <iframe src="original_netflix_dataset"></iframe><br><br>
+
+    <big>Cleaned Dataset:</big><br>
+    <iframe src="phase2_task1_cleaned_dataset"></iframe><br><br>
+
+    <big>Insight No. 1: USA has the highest number of movies and series content combined. Followed by India and United Kingdom</big>
+    <img src="static/insight_1.png" alt="Image cannot be displayed!"><br>
+
+    <big>Insight No. 2: Rapid growth in content release has been observed from 2015 with peak in 2018 and decline thereof.</big>
+    <img src="static/insight_2.png" alt="Image cannot be displayed!"><br>
+
+    <big>Insight No. 3: Total 5091 Movies and 2519 Series have been created between the year 2009 and 2021</big>
+    <img src="static/insight_3.png" alt="Image cannot be displayed!"><br>
+
+    <big>Insight No. 4: Most customers are adults since the content rated "TV-MA" tops the list of most popular content based on rating</big>
+    <img src="static/insight_4.png" alt="Image cannot be displayed!"><br>
+
+    <big>Insight No. 5:<br>
+        1) Rajiv Chilaka has directed the most Movies and Alastair Fothergill has directed the most TV Shows<br>
+        2) Most directors prefer to direct Movies rather than TV Shows</big>
+    <img src="static/insight_5.png" alt="Image cannot be displayed!"><br>
+
+    <big>Insight No. 6: The most popular Genre is "International Movies" followed by "Dramas" and "International TV Shows"</big>
+    <img src="static/insight_6.png" alt="Image cannot be displayed!"><br><br>
+
+    <div class="container container-buttons" style="text-align: center;">
+        <a href="home" class="btn btn-primary">Return Home</a>
+    </div><br><br>
+{% endblock body %}

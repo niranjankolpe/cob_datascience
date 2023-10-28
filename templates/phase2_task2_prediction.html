@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Prediction{% endblock title %}
+
+{% block style %}{% endblock style %}
+
+{% block script %}{% endblock script %}
+
+{% block body %}
+    <center>
+        <h2>Prediction</h2><br>
+        <big>
+            Your Chosen Model: {{model_name}}<br><br>
+            Your Input: {{user_input}}<br><br>
+            Predicted Value: {{prediction}}
+        </big><br><br>
+        
+        <div class="container container-buttons" style="text-align: center;">
+            <a href="home" class="btn btn-primary">Return Home</a>
+        </div><br><br>
+    </center>
+{% endblock body %}

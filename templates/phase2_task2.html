@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Phase 2 - Task 1{% endblock title %}
+
+{% block style %}
+iframe{
+    width: 250px;
+    height: 300px;
+    border: 1px solid black;
+}
+img{
+    width: 80%;
+    height: 500px;
+}
+#phase2_task2_model_evaluation{
+    width: 50%;
+    height: 125px;
+}
+{% endblock style %}
+
+{% block script %}{% endblock script %}
+
+{% block body %}
+    <h2>Phase 2 - Task 2</h2><br>
+
+    <big>
+        Task 2: Train a simple linear regressing model on dataset and predict the output.<br><br>
+
+        Train Dataset:<br>
+        https://docs.google.com/spreadsheets/d/e/2PACX-1vRTK2NvcndgPX41Czu6Ft2Ho_nE-z50BgTqdzwFW0rsJ2nvyNLe2DoIg1COzUbgw80oaRBjfy5-WtFk/pubhtml<br>
+    </big>
+    <iframe src="phase2_task2_train_dataset"></iframe><br><br>
+
+    <big>Test Dataset:<br>
+        https://docs.google.com/spreadsheets/d/e/2PACX-1vRyvZ7lknwiSghK9aen1SaTEYoN3JS40rrGLpcyrsVZy1tB2T4gn6Y3-cdzPUFCPMmmqREWefW3kl4_/pubhtmlOriginal Dataset: <br></big><br><br>
+    <iframe src="phase2_task2_test_dataset"></iframe><br><br>
+
+    <big>Model Evaluation</big><br>
+    <iframe id="phase2_task2_model_evaluation" name="phase2_task2_model_evaluation" src="phase2_task2_model_evaluation"></iframe><br>
+    <img src="static/phase2_task2_model_evaluation.png" alt="Image cannot be displayed!"><br><br><br>
+
+    <form class="form-control" action="phase2_task2_prediction" method="post">
+        {% csrf_token %}
+        <h4>Prediction:</h4><br>
+
+        <label for="user_input">Enter a value for X: </label>
+        <input class="form-control" type="number" name="user_input" id="user_input" required><br>
+        
+        <label for="model_name">Choose a Model: </label>
+        <select class="form-control" name="model_name" id="model_name" required>
+            <option value="phase2_task2_linear_regression_model">Linear Regression</option>
+            <option value="phase2_task2_support_vector_regression_model">Support Vector Regression</option>
+            <option value="phase2_task2_random_forest_regression_model">Random Forest Regression</option>
+        </select><br><br>
+        
+        <button class="btn btn-primary" type="submit">Predict Y value</button>
+    </form><br><br>
+
+    <div class="container container-buttons" style="text-align: center;">
+        <a href="phase2_task2_model_refresh" class="btn btn-primary">Refresh Models</a>
+        <a href="home" class="btn btn-primary">Return Home</a>
+    </div><br><br>
+{% endblock body %}
